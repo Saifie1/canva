@@ -1,0 +1,29 @@
+:root {
+  --primary-dark: #23b1ae;
+  --primary-light: #25d6d2;
+  --primary: #36c6c2;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+}
+
+.container {
+  min-height: 500px;
+}
+.push {
+  transform: translateX(500px);
+}
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Tangerine', cursive;
+font-family: 'Zen Tokyo Zoo', cursive;*/

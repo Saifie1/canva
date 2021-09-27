@@ -1,0 +1,27 @@
+.navbar{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 3rem;
+	background: #f4f4f4;
+	font-size: 0.8rem;
+	font-weight: 500;
+	position: sticky;
+	top: 0;
+}
+
+.nav-items{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	list-style: none;
+}
+
+.nav-items li{
+	margin: 0 1rem;
+}
+
+.logo{
+	height: 50px;
+}
