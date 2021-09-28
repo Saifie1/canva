@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./navbar.css"
 import {Link} from "react-router-dom"
 import {FaBars} from "react-icons/fa"
@@ -6,27 +6,44 @@ import {BiSearch} from "react-icons/bi"
 import {AiOutlineUser} from "react-icons/ai"
 import Draggable from 'react-draggable';
 export default function Navbar() {
+
+	const [array,setArray]=useState([])
+	const arr=[]
 	const  handleStart=()=>{
-		console.log('fds')
+		
 	 
 	   }
 	   const  handleDrag=()=>{
-		 console.log('fds')
-	 
+	
 	   }
 	   const  handleStop=()=>{
-		 console.log('fds')
+	
 	 
 	   }
+	   React.useEffect(()=>{
+
+	   },[array])
 	return(
 		<>
 
 		<div className="col-md-12 navbar navbar-expand-lg navbar-light bg-light">
 		<ul className="nav-items navbar-nav mr-auto mt-2 mt-lg-">
 		<li  class="collapse navbar-collapse" id='navbarToggle' ><Link to="/">logo</Link></li>
-		
+	
+		{/* <li>{JSON.stringify(array)}</li> */}
 		<li>
-		<Draggable
+	
+   
+	  <div  className="handle btn btn-warning btn-block" onClick={()=>{console.log('df')
+	  if(array.length<1){
+	setArray([...array,'buttons'])}
+	  }}>
+	Buttons
+	  </div>
+	  {array.map(item=>{
+			return(
+				<>
+				<Draggable
       
 	  handle=".handle"
 	  defaultPosition={{x: 0, y: 0}}
@@ -36,11 +53,21 @@ export default function Navbar() {
 	  onStart={handleStart}
 	  onDrag={handleDrag}
 	  onStop={handleStop}>
-	  <div  className="handle btn btn-warning">
-	Buttons
+	  <div  className="handle btn btn-warning block">
+	{item}
+	<button type="button" class="btn" onClick={()=>{console.log('df')
+	  if(array.length<2){
+	setArray([])}
+	  }}>X</button>
 	  </div>
 	 
 	</Draggable>
+				</>
+			)
+			console.log(item)
+		})}
+	 
+
 		
 
 		</li>
