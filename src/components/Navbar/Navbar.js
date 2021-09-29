@@ -26,9 +26,9 @@ export default function Navbar() {
 	return(
 		<>
 
-		<div className="col-md-12 navbar navbar-expand-lg navbar-light bg-light">
+		<div className="element col-md-12 navbar navbar-expand-lg navbar-light bg-light">
 		<ul className="nav-items navbar-nav mr-auto mt-2 mt-lg-">
-		<li  class="collapse navbar-collapse" id='navbarToggle' ><Link to="/">logo</Link></li>
+		<li  className=" collapse navbar-collapse" id='navbarToggle' ><Link>logo</Link></li>
 	
 		{/* <li>{JSON.stringify(array)}</li> */}
 		<li>

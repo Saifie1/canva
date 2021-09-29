@@ -7,6 +7,8 @@ import Navbar from "./components/Navbar/Navbar.js"
 import Main from "./components/Main"
 import Text from "./components/Text"
 import Edit from "./components/Edit"
+import {Editor, Frame, Element} from "@craftjs/core";
+import Movable from "./components/Movable"
 export default function App() {
   return (
     <>
@@ -17,6 +19,8 @@ export default function App() {
    
     <Route path="/editor1" exact component={Text}/>
     <Route path="/editor" exact component={Edit}/>
+    <Route path="/movable" exact component={Movable}/>
+
     </Switch>
     <Footer/>
     </Router>
