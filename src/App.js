@@ -8,7 +8,8 @@ import Main from "./components/Main"
 import Text from "./components/Text"
 import Edit from "./components/Edit"
 import {Editor, Frame, Element} from "@craftjs/core";
-import Movable from "./components/Movable2"
+import Movable from "./components/Movable"
+import Movable2 from "./components/Movable2"
 export default function App() {
   return (
     <>
@@ -19,7 +20,7 @@ export default function App() {
    
     <Route path="/editor1" exact component={Text}/>
     <Route path="/editor" exact component={Edit}/>
-    <Route path="/movable" exact component={Movable}/>
+    {/* <Route path="/movable" exact component={Movable}/> */}
 
     </Switch>
     <Footer/>

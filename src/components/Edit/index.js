@@ -12,29 +12,31 @@ import { Button } from '../users/Button';
 import { Card ,CardTop,CardBottom} from '../users/Card';
 import { Text } from '../users/Text';
 import {Editor, Frame, Element} from "@craftjs/core";
+import Movable from "../Movable"
 export default function App() {
   return (
     <div style={{margin: "0 auto", width: "800px"}}>
-      <Typography variant="h5" align="center">A super simple page editor</Typography>
+         <Movable/>
+      <Typography variant="h5" align="center">Edit Your Text</Typography>
       <Editor
           resolver={{Card, Button, Text, CardTop, CardBottom}}
         > 
 
-      <Grid container spacing={3} style={{paddingTop: "10px"}}>
+      <Grid className="body-con" container spacing={3} style={{paddingTop: "10px"}}>
         <Topbar />
         <Grid item xs>
-        <Frame>
-  <Element is={Container} padding={5} background="#eee" canvas>
+        <Frame> 
+  <Element is={Container}  background="#999" className="body-con" canvas>
     <Card /> 
     <Button size="small" variant="outlined">Click</Button> 
-    <Text size="small" text="Hi world!" />
-    <Element is={Container} padding={2} background="#999" canvas> 
+    <Text size="small" text="Edit The Text" />
+    <Element is={Container} className="body-con" background="#999" canvas> 
        <Text size="small" text="It's me again!" /> 
     </Element>
   </Element>
 </Frame>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={2.3}>
           <Paper>
               <Toolbox />
               <SettingsPanel />
@@ -42,6 +44,7 @@ export default function App() {
         </Grid>
       </Grid>
       </Editor>
+   
     </div>
   );
 }

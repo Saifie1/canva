@@ -10,7 +10,7 @@ export default function Mavable() {
     rotate: 0
   });
   const moveableRef = React.useRef();
-  console.log("R");
+
   React.useEffect(() => {
     const target = document.querySelector(".target");
 
@@ -20,33 +20,20 @@ export default function Mavable() {
 
     target.addEventListener("load", () => {
       setTimeout(() => {
-        moveableRef.current.updateRect();
+        moveableRef?.current?.updateRect();
       }, 2000);
     });
   }, []);
   return (
     <div className="container">
       <img
-        className={active?"target":""}
+        className="target"
         src="https://naver.github.io/egjs-infinitegrid/assets/image/1.jpg"
         alt="target"
         onClick={()=>{setActive(true)}}
       />
-       <img
-   
-        src="https://static.scientificamerican.com/sciam/cache/file/0C3A8B2F-3F64-4BB5-86DEB2E041D28A2D_source.jpg?w=590&h=800&40A9C99B-A2BF-4496-A9D4D2DF4B637191"
-        alt="target"
-      />
-       <img
-      
-        src="https://images.unsplash.com/photo-1632813101579-7e7d4dd2c69a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
-        alt="target"
-      />
-       <img
-        className={active?"" :"target"}
-        src="https://naver.github.io/egjs-infinitegrid/assets/image/1.jpg"
-        alt="target"
-      />
+  
+     
       <Moveable
         ref={moveableRef}
         target={target}

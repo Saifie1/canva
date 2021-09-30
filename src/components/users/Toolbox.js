@@ -11,7 +11,7 @@ export const Toolbox = () => {
   const { connectors, query } = useEditor();
 
   return (
-    <Box px={2} py={2}>
+    <Box bgcolor="#777" px={2} py={2}>
       <Grid container direction="column"  alignItems="center" justify="center" spacing={1}>
         <Box pb={2}>
           <Typography>Drag to add</Typography>

@@ -4,14 +4,14 @@ import {Text} from "./Text";
 import {Button} from "./Button";
 import { Element, useNode } from "@craftjs/core";
 
-import { Container }  from "./Container";
+import { Container ,ContainerSettings,ContainerDefaultProps}  from "./Container";
 
 // Notice how CardTop and CardBottom do not specify the drag connector. This is because we won't be using these components as draggables; adding the drag handler would be pointless.
 
 export const CardTop = ({children}) => {
   const { connectors: {connect} } = useNode();
   return (
-    <div ref={connect} className="text-only">
+    <div ref={connect} className=" text-only">
       {children}
     </div>
   )
@@ -27,7 +27,7 @@ CardTop.craft = {
 export const CardBottom = ({children}) => {
   const { connectors: {connect} } = useNode();
   return (
-    <div ref={connect}>
+    <div className="" ref={connect}>
       {children}
     </div>
   )
@@ -52,4 +52,12 @@ export const Card = ({background, padding = 20}) => {
       </Element>
     </Container>
   )
+}
+
+Card.craft = {
+  props: ContainerDefaultProps,
+  related: {
+    // Since Card has the same settings as Container, we'll just reuse ContainerSettings 
+    settings: ContainerSettings
+  }
 }

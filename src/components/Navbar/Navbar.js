@@ -28,8 +28,8 @@ export default function Navbar() {
 
 		<div className="element col-md-12 navbar navbar-expand-lg navbar-light bg-light">
 		<ul className="nav-items navbar-nav mr-auto mt-2 mt-lg-">
-		<li  className=" collapse navbar-collapse" id='navbarToggle' ><Link>logo</Link></li>
-	
+		<li  className=" collapse navbar-collapse" id='navbarToggle' ><Link to="/movable">logo</Link></li>
+		<li  className=" collapse navbar-collapse" id='navbarToggle' ><Link to="/editor">editor</Link></li>
 		{/* <li>{JSON.stringify(array)}</li> */}
 		<li>
 	
