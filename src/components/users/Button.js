@@ -16,7 +16,7 @@ const ButtonSettings = () => {
   }));
 
   return (
-    <div className="">
+    <div className="con">
       <FormControl size="small" component="fieldset">
         <FormLabel component="legend">Size</FormLabel>
         <RadioGroup defaultValue={props.size} onChange={(e) => setProp(props => props.size = e.target.value )}>

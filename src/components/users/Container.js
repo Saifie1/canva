@@ -9,7 +9,7 @@ export const Container = ({background, padding = 0, children}) => {
     const { connectors: {connect, drag} } = useNode();
   return (
       
-    <Paper  ref={ref=> connect(drag(ref))} style={{ background, padding: `${padding}px`}}>
+    <Paper className="con" ref={ref=> connect(drag(ref))} style={{ background, padding: `${padding}px`}}>
       {children}
     </Paper>
   )
@@ -38,7 +38,7 @@ export const ContainerSettings = () => {
   )
 }
 export const ContainerDefaultProps = {
-  background : "#ffffff",
+  background : "#ddd",
   padding: 3
 };
 Container.craft = {

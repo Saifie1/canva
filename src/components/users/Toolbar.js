@@ -9,7 +9,7 @@ export const Topbar = () => {
   }));
 
   return (
-    <Box bgcolor="#777">
+    <Box  bgcolor="#777">
       <Grid   container alignItems="center">
         <Grid item xs>
         

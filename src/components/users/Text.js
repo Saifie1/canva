@@ -20,7 +20,7 @@ export const Text = ({text, fontSize}) => {
     >
       <ContentEditable
         html={text} 
-       
+       className="p"
         onChange={e => 
           setProp(props => 
             props.text = e.target.value.replace(/<\/?[^>]+(>|$)/g, "")  

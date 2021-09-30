@@ -4,37 +4,40 @@ import Moveable from "react-moveable";
 
 export default function Mavable() {
   const [target, setTarget] = React.useState();
-  const [active,setActive]=React.useState();
+  const [active,setActive]=React.useState(false);
   const [frame] = React.useState({
     translate: [0, 0],
     rotate: 0
   });
   const moveableRef = React.useRef();
-
+  console.log('rerender');
   React.useEffect(() => {
     const target = document.querySelector(".target");
 
     setTarget(target);
 
-    console.log(moveableRef.current.props.target);
+   
 
     target.addEventListener("load", () => {
       setTimeout(() => {
         moveableRef?.current?.updateRect();
       }, 2000);
     });
-  }, []);
+  }, [active]);
   return (
-    <div className="container">
+    <div>
       <img
         className="target"
         src="https://naver.github.io/egjs-infinitegrid/assets/image/1.jpg"
         alt="target"
-        onClick={()=>{setActive(true)}}
+        onClick={()=>{
+          console.log(active)
+          setActive(!active)}}
       />
+       
   
      
-      <Moveable
+     { active && <Moveable
         ref={moveableRef}
         target={target}
         draggable={true}
@@ -70,7 +73,11 @@ export default function Mavable() {
             frame.translate[1]
           }px) rotate(${frame.rotate}deg)`;
         }}
-      />
+      />}
+       <button className="btn btn-primary"
+        onClick={()=>{
+          console.log(active)
+          setActive(!active)}}>Make Movable</button>
     </div>
   );
 }

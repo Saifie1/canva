@@ -26,13 +26,9 @@ export default function App() {
         <Topbar />
         <Grid item xs>
         <Frame> 
-  <Element is={Container}  background="#999" className="body-con" canvas>
-    <Card /> 
-    <Button size="small" variant="outlined">Click</Button> 
-    <Text size="small" text="Edit The Text" />
-    <Element is={Container} className="body-con" background="#999" canvas> 
-       <Text size="small" text="It's me again!" /> 
-    </Element>
+  <Element is={Container}  background="" className="body-con" canvas>
+   
+   
   </Element>
 </Frame>
         </Grid>
