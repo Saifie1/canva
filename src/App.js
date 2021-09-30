@@ -8,7 +8,7 @@ import Main from "./components/Main"
 import Text from "./components/Text"
 import Edit from "./components/Edit"
 import {Editor, Frame, Element} from "@craftjs/core";
-import Movable from "./components/Movable"
+import Movable from "./components/Movable2"
 export default function App() {
   return (
     <>
