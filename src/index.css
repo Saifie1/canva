@@ -22,18 +22,23 @@ body {
   max-height: 1700px !important;
 }
 .body-con {
-  width: 1100px !important; /* or whatever width you want. */
-  max-width: 1100px !important;
+  width: 1050px !important; /* or whatever width you want. */
+  max-width: 1050px !important;
   overflow: scroll;
-  height: 600px !important;
-  max-height: 600px !important;
+  height: 700px !important;
+  max-height: 700px !important;
 }
 .con {
   width: 750px !important; /* or whatever width you want. */
   max-width: 700px !important;
+  max-height: 600px !important;
+  min-height: 600px !important;
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
 }
-img {
-  width: 100px;
+.dem {
+  width: 100px !important;
+  position: absolute !important;
 }
 
 .container {
